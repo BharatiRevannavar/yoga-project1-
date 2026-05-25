@@ -1,0 +1,99 @@
+.yoga-container {
+    background: linear-gradient(100deg, #FF8C00, #FFA500);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stats row at top */
+.performance-container {
+    display: flex;
+    padding: 16px 20px;
+    gap: 10px;
+}
+
+.pose-performance {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+.pose-performance h4 {
+    color: rgba(0,0,0,0.7);
+    margin: 0;
+}
+
+/* Webcam + pose image side by side */
+.active-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 40px;
+    flex: 1;
+}
+
+.webcam-wrapper {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    flex-shrink: 0;
+}
+
+#webcam {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#my-canvas {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.pose-img {
+    width: 400px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Stop / Start button centered at bottom */
+.btn-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.secondary-btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 4px solid rgba(125, 125, 125, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.starting-contdown {
+    margin: auto;
+    border: 10px solid rgba(125, 125, 125, 0.5);
+    width: max-content;
+    padding: 10px 30px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0);
+    position: relative;
+    top: 45%;
+}
+.starting-contdown h1 {
+    color: white;
+}
